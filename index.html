@@ -1,181 +1,23 @@
-<!doctype html>  
+<!DOCTYPE HTML>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>FeedBand. The Best Personal Fitness Trainer.</title>
-<link rel="icon" href="images/favicon.gif" type="image/x-icon"/>
- <!--[if lt IE 9]>
- <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-  
-<!-- Modal styles -->
-<link type='text/css' href='./css/demo.css' rel='stylesheet' media='screen' />
-<!-- Contact Form CSS files -->
-<link type='text/css' href='./css/basic.css' rel='stylesheet' media='screen' />
-<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-<link rel="shortcut icon" href="images/favicon.gif" type="image/x-icon"/> 
-<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+	<meta charset="utf-8">
+	<title>Shafkat</title>
+	<meta name="description" content="Shafkat ul Haque">
 
-<script type="text/javascript" src=" https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.js"></script>
-<script type="text/javascript" src="./js/script.js"></script>
-<script type='text/javascript' src='./js/jquery.simplemodal.js'></script>
-<script type='text/javascript' src='./js/basic.js'></script>
+	<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="./style.css">
 
-    <script type="text/javascript">
-    
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-30201984-1']);
-    _gaq.push(['_trackPageview']);
-    
-    (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-    
-    </script>
-    
-    </head>
-    <body onload="response();">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="./script.js"></script>
 	
-    <!--start container-->
-    <div id="container">
-    <a href="./index.html" id="logo"><img src="./images/feedband-logo2.png" width="275" alt="logo"/></a>
+	<style>
+		body { background-color: black; }
+		#image { margin-left: 11%; margin-top: 9%; }
+	</style>
+</head>
 
-   <!--start intro-->
-
- <div id="topLine" class="holder_content">
-   <section class="group1">
-	</section>
-	</div>
-
-   <div id="intro">
-   <img id="pitchingLine" src="./images/pitch.png" width="600px"/>
-	
-   <a href="#"><img id="product1" src="images/product.png" width="350px"alt="baner"/></a>
-   <img id="product_divider" src="images/line_vertical.png" width="7" />   
-	<a href="#"><img id="product2" src="images/product.png" width="350px"alt="baner"/></a>
-
-   <button id="orderProduct2" class="submitBtn">Like</button>
-	<button id="orderProduct1" class="submitBtn">Like</button>
-	<p id="messageText">Please Choose the Product you Like Best</p>
-   </div>
-   
-	
-   <!--end intro-->
-   
-   	<!--img id="message" src="./images/message.png" width="500px"/-->
-   
-   <!--start holder-->
-   <div id="bottomLine" class="holder_content">
-   <section class="group1">
-	<h3 id="details_header">Details</h3>
-   	<p id="detailsBody">Feedband uses Bluetooth Smart and integrates with the iPhone 4S (as well as other Bluetooth Smart Ready devices) 
-   	to give you all your fitness vitals in real time. Feedband is perfect for runners and other fitness enthusiasts 
-   	because it connects wirelessly. While running, training, or working at your office, you can track accurate, 
-   	real-time fitness vital data to your smartphone to track your performance. Simplify your life.</p>
-	</section>
-	</div>
-   </div>
-   <!--end holder-->
-   
-   <!--start footer-->
-   <footer>
-   <div class="container"> 
-   <center>
-   <div id="FooterTwo"> © 2012 FeedBand Inc.</div>
-	<div id="FooterFour">contact@feedband.ca  |  <a href="http://twitter.com/#!/feedband"><img id="twitter" src="./images/twitter2.png" width="40"/></a></div>
-   <div id="FooterTree">FeedBand | Redefining How You Track Your Fitness</div> 
-   </center>
-   </div>
-   </footer>
-   <!--end footer-->
-<!-- Free template distributed by http://freehtml5templates.com -->   
-
-<!-- modal for product 1 -->
-		<div id="basic-modal-content-prod1">
-	   <h3 id="formHeader">Sign Up</h3>
-	   <div id="subFormHeader">to get updates on product availability</div>
-	   <script type="text/javascript">var submitted=false;
-	   </script>
-
-		<iframe name="hidden_iframe" id="hidden_iframe"
-		style="display:none;" onload="if(submitted){  }"></iframe>
-		
-		<form id="signup_form" action="https://docs.google.com/spreadsheet/formResponse?formkey=dDJMQmZJWlZPZUFmMDY3NF9kbW5RbVE6MQ&amp;ifq" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true; window.location.reload(); localStorage.setItem('signup','true');">
-
-		<br>
-		<div class="errorbox-good">
-		<div class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_0">Name: 
-		</label>
-		<label class="ss-q-help" for="entry_0"></label>
-		<input type="text" name="entry.0.single" value="" class="ss-q-short" id="entry_0"></div></div></div>
-		<br> <div class="errorbox-good">
-		<div class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_1">Email: 
-		</label>
-		<label class="ss-q-help" for="entry_1"></label>
-		<input type="text" name="entry.1.single" value="" class="ss-q-short" id="entry_1"></div></div></div>
-		<br>
-		<input type="hidden" name="pageNumber" value="0">
-		<input type="hidden" name="backupCache" value="">
-		
-		
-		<div class="ss-item ss-navigate"><div class="ss-form-entry">
-		<input id="submitBtn" class = "formSubmitBtn" type="submit" name="submit" value="Submit"></div></div></form>
-		
-	
-   <!--end container-->
-		</div>
-		
-		
-	<!-- modal for product 2 -->
-		<div id="basic-modal-content-prod2">
-	   <h3 id="formHeader">Sign Up</h3>
-	   <div id="subFormHeader">to get updates on product availability</div>
-	   <script type="text/javascript">var submitted=false;
-	   </script>
-
-		<iframe name="hidden_iframe" id="hidden_iframe"
-		style="display:none;" onload="if(submitted){  }"></iframe>
-		
-		<form id="signup_form" action="https://docs.google.com/spreadsheet/formResponse?formkey=dGpzQjlIR2ZiNml4c25rWlBoR3psUEE6MQ&amp;ifq" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true; window.location.reload(); localStorage.setItem('signup','true');">
-
-		<br>
-		<div class="errorbox-good">
-		<div class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_2">Name: 
-		</label>
-		<label class="ss-q-help" for="entry_2"></label>
-		<input type="text" name="entry.2.single" value="" class="ss-q-short" id="entry_2"></div></div></div>
-		<br> <div class="errorbox-good">
-		<div class="ss-item  ss-text"><div class="ss-form-entry"><label class="ss-q-title" for="entry_1">Email: 
-		</label>
-		<label class="ss-q-help" for="entry_1"></label>
-		<input type="text" name="entry.1.single" value="" class="ss-q-short" id="entry_1"></div></div></div>
-		<br>
-		<input type="hidden" name="pageNumber" value="0">
-		<input type="hidden" name="backupCache" value="">
-		
-		
-		<div class="ss-item ss-navigate"><div class="ss-form-entry">
-		<input id="submitBtn" class = "formSubmitBtn" type="submit" name="submit" value="Submit"></div></div></form>
-		
-	
-   <!--end container-->
-		</div>
-		
-		<!-- modal for product 2 -->
-		<div id="basic-modal-content-response">
-	   	<br />
-	   	<br />
-	   	<br />
-	   	<br />
-	   <h3 id="thankYou">Thank you for Signing up with Feedband!</h3>
-   <!--end container-->
-		</div>
-
-		<!-- preload the images -->
-		<div style='display:none'>
-			<img src='./images/close_button.png' alt='' />
-		</div>
-
-   </body>
-   </html>
+<body>
+	<img id="image" src="./anonymous.jpg" width="1000px" />
+</body>
+</html>
