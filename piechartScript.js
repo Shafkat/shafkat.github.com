@@ -371,9 +371,8 @@ function pieChart() {
   }
 
 };
-
-$(document).ready(function()
-{	
+function qTipLoad()
+{
 	$('#work_feedband_1').qtip({
 				content: {
 					text: 'Developing iOS, Android and Blackberry applications to accompany hardware product'
@@ -404,5 +403,44 @@ $(document).ready(function()
 					target: $('#work_feedband_3')
 				}
 			});
+	$('#work_fundraid_1').qtip({
+				content: {
+					text: 'Worked on official website to improve performance using HTML5, Javascript, CSS'
+				},
+				position: {
+					my: 'right center',
+					at: 'left center',
+					target: $('#work_fundraid_1')
+				}
+			});
+}
+$(document).ready(function()
+{	
+	qTipLoad();
 });
+
+var feedband, communitech, fundraid, vixs, sayerrecords = new Object();
+feedband = { "Company":"Feedband", "Position":"Co-founder, Lead of Software Dev.", "Time":"Dec'11 - Present","Location":"Waterloo, ON","Tasks": tasks = ['Software Dev.','Cloud Infrastructure','Product R&D + Business Management'], "WorkDistribution": workDis = ['50%','20%','30%'], "Color": colors = ['F5444D','44Da61','00B0EA'], "qTipID": id = ['work_feedband_1','work_feedband_2','work_feedband_3']};
+communitech = { "Company":"Communitech AppsFactory", "Position":"Software Developer", "Time":"Sept'11 - April'12","Location":"Kitchener, ON","Tasks": tasks = ['Software Dev.','Cloud Infrastructure','Product R&D + Business Management'], "WorkDistribution": workDis = ['50%','20%','30%'], "Color": colors = ['F5444D','44Da61','00B0EA'], "qTipID": id = ['work_feedband_1','work_feedband_2','work_feedband_3']};
+fundraid = { "Company":"FundRaid Inc.", "Position":"Web Developer", "Time":"Dec'11","Location":"Kitchener, ON","Tasks": tasks = ['Web Dev. on Official Website','Debugging'], "WorkDistribution": workDis = ['75%','25%'], "Color": colors = ['F5444D','44Da61','00B0EA'], "qTipID": id = ['work_fundraid_1','work_fundraid_2']};
+var masterTable = [ feedband, communitech, fundraid, vixs, sayerrecords ];
+
+function swap(data)
+{		
+	var i;
+	
+	$('#work_leftSide').empty();
+	$('#work_leftSide').append(data.Company+'<br />'+data.Position+'<br />'+data.Time+'<br />'+data.Location);
+	
+	$('#chartData').empty();
+	$('#chartData').append('<tr><th>Responsibility</th><th>% of Work</th></tr>');
+	
+	for(i = 0; i<data.Tasks.length; i++)
+	{
+		$('#chartData').append('<tr style="color: #'+data.Color[i]+ '"id='+data.qTipID[i]+'><td>'+data.Tasks[i]+'</td><td>'+data.WorkDistribution[i]+'</td></tr>');
+	}	
+	
+	$( pieChart );
+	qTipLoad();
+}
 

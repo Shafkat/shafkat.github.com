@@ -22,7 +22,7 @@
 
 		<div id="outerBox">
 		
-		<div class="work_leftSide">
+		<div id="work_leftSide" class="work_leftSide">
 			Feedband<br />Co-Founder, Head of Software Dev.<br/>Dec'11 - Present<br />Waterloo, ON
 		</div>
 		<div id="work_right1">
@@ -31,17 +31,15 @@
 		  <canvas id="chart" width="350" height="350"></canvas>
 		
 		  <table id="chartData">
-		
 			<tr>
-			  <th>Responsibility</th><th>Time Spent</th>
+			  <th>Responsibility</th><th>% of Work</th>
 			 </tr>
-		
 			<tr style="color: #F5444D" id="work_feedband_1">
 			  <td>Software Dev.</td><td>50%</td>
 			</tr>
 		
 			<tr style="color: #44Da61" id="work_feedband_2">
-			  <td>Cloud Infrascructure</td><td>20%</td>
+			  <td>Cloud Infrastructure</td><td>20%</td>
 			</tr>
 		
 			<!--tr style="color: #FFB90F">
@@ -65,15 +63,15 @@
 			  <th>Company</th><th>Position</th><th>When</th>
 			 </tr>
 		
-			<tr style="color: #F5444D" id="workX_feedband">
+			<tr style="color: #F5444D" id="workX_feedband" onclick="swap(masterTable[0]);" ontouchend="swap(masterTable[0]);">
 			  <td>Feedband</td><td>Head of Software</td><td>Dec'11 - Present</td>
 			</tr>
 		
-			<tr style="color: #44Da61" id="workX_Communitech">
+			<tr style="color: #44Da61" id="workX_Communitech" onclick="swap(masterTable[1]);" ontouchend="swap(masterTable[1]);">
 			  <td>Communitech AppsFactory</td><td>Software Developer</td><td>Sept'11 - April'12</td>
 			</tr>
 		
-			<tr style="color: #00B0EA" id="workX_FundRaid">
+			<tr style="color: #00B0EA" id="workX_FundRaid" onclick="swap(masterTable[2]);" ontouchend="swap(masterTable[2]);">
 			  <td>FundRaid Inc.</td><td>Web Developer</td><td>Dec'11</td>
 			</tr>
 			
