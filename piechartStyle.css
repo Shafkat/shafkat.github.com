@@ -65,6 +65,46 @@ body {
   background: #BFEFFF;
 }
 
+#workTable
+{
+	width: 500px;
+  font-size: 0.90em;
+  margin: 0 0px 0 0;
+  float: right;
+  margin-top: -5%;
+  margin-right: 22.5%;
+  border-collapse: collapse;
+  border-radius: 7px;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  background-position: 0 -100px;
+}
+
+#workTable th, #workTable td {
+  padding: 0.5em;
+  border: 0px dotted #666;
+  text-align: left;
+}
+
+#workTable th {
+  border-bottom: 1px solid #333;
+  text-transform: uppercase;
+}
+
+#workTable td {
+  cursor: pointer;
+}
+
+#workTable td.highlight {
+  background: #C3E4ED;
+}
+
+#workTable tr:hover td {
+  background: #BFEFFF;
+}
+
+
 #work_right1
 {
 	margin-left: -10%;
@@ -153,7 +193,7 @@ body {
 	position: fixed;
 	float: right;
 	right: 0px;
-	top: 225px;
+	top: 245px;
 	
 	width:125px;
 	height:60px;

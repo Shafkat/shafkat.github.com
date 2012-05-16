@@ -15,7 +15,7 @@ function pieChart() {
   var sliceBorderWidth = 1;                         // Width (in pixels) of the border around each slice
   var sliceBorderStyle = "#fff";                    // Colour of the border around each slice
   var sliceGradientColour = "#ddd";                 // Colour to use for one end of the chart gradient
-  var maxPullOutDistance = 15;                      // How far, in pixels, to pull slices out when clicked
+  var maxPullOutDistance = 10;                      // How far, in pixels, to pull slices out when clicked
   var pullOutFrameStep = 4;                         // How many pixels to move a slice with each animation frame
   var pullOutFrameInterval = 40;                    // How long (in ms) between each animation frame
   var pullOutLabelPadding = 65;                     // Padding between pulled-out slice and its label  
@@ -173,7 +173,7 @@ function pieChart() {
 
   function handleTableClick ( clickEvent ) {
     var slice = $(this).data('slice');
-    toggleSlice ( slice );
+    //toggleSlice ( slice );
   }
 
 
@@ -367,7 +367,7 @@ function pieChart() {
    */
 
   function easeOut( ratio, power ) {
-    return ( Math.pow ( 1 - ratio, power ) + 1 );
+    return ( Math.pow ( 1 - ratio, power ) + 0.5 );
   }
 
 };
