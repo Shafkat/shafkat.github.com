@@ -79,6 +79,7 @@ body {
   -moz-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
   background-position: 0 -100px;
+  background-color: #F5F5F5;
 }
 
 #workTable th, #workTable td {
