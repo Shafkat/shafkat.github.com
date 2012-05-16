@@ -403,6 +403,47 @@ function qTipLoad()
 					target: $('#work_feedband_3')
 				}
 			});
+	$('#work_communitech_1').qtip({
+				content: {
+					text: 'Wireframed and developed a client-server location based photo-sharing web app using HTML5, JavaScript, CSS, jQuery Mobile and PhoneGap for Blackberry and Android devices'
+				},
+				position: {
+					my: 'right center',
+					at: 'left center',
+					target: $('#work_communitech_1')
+				}
+			});
+	$('#work_communitech_2').qtip({
+				content: {
+					text: 'Lead developer for a native Android email and text messaging app'
+				},
+				position: {
+					my: 'right center',
+					at: 'left center',
+					target: $('#work_communitech_2')
+				}
+			});
+	$('#work_communitech_3').qtip({
+				content: {
+					text: 'Created game for UW Pharmacy app to aid vision test using HTML5, jQuery, CSS and PhoneGap for Blackberry Playbook and iPad'
+				},
+				position: {
+					my: 'right center',
+					at: 'left center',
+					target: $('#work_communitech_3')
+				}
+			});
+	$('#work_communitech_4').qtip({
+				content: {
+					text: 'Created server API and handled communications between external servers to delegate print jobs for visitor registration app on Blackberry Playbooks'
+				},
+				position: {
+					my: 'right center',
+					at: 'left center',
+					target: $('#work_communitech_4')
+				}
+			});
+	
 	$('#work_fundraid_1').qtip({
 				content: {
 					text: 'Worked on official website to improve performance using HTML5, Javascript, CSS'
@@ -414,15 +455,18 @@ function qTipLoad()
 				}
 			});
 }
+
 $(document).ready(function()
 {	
 	qTipLoad();
 });
 
 var feedband, communitech, fundraid, vixs, sayerrecords = new Object();
+
 feedband = { "Company":"Feedband", "Position":"Co-founder, Lead of Software Dev.", "Time":"Dec'11 - Present","Location":"Waterloo, ON","Tasks": tasks = ['Software Dev.','Cloud Infrastructure','Product R&D + Business Management'], "WorkDistribution": workDis = ['50%','20%','30%'], "Color": colors = ['F5444D','44Da61','00B0EA'], "qTipID": id = ['work_feedband_1','work_feedband_2','work_feedband_3']};
-communitech = { "Company":"Communitech AppsFactory", "Position":"Software Developer", "Time":"Sept'11 - April'12","Location":"Kitchener, ON","Tasks": tasks = ['Software Dev.','Cloud Infrastructure','Product R&D + Business Management'], "WorkDistribution": workDis = ['50%','20%','30%'], "Color": colors = ['F5444D','44Da61','00B0EA'], "qTipID": id = ['work_feedband_1','work_feedband_2','work_feedband_3']};
+communitech = { "Company":"Communitech AppsFactory", "Position":"Software Developer", "Time":"Sept'11 - April'12","Location":"Kitchener, ON","Tasks": tasks = ['Web Photo Sharing App','Android Sms and Email App','HTML5 Game for Tablets','Server API for Playbook App'], "WorkDistribution": workDis = ['35%','15%','35%','15%'], "Color": colors = ['F5444D','44Da61','00B0EA','FFB90F'], "qTipID": id = ['work_communitech_1','work_communitech_2','work_communitech_3','work_communitech_4']};
 fundraid = { "Company":"FundRaid Inc.", "Position":"Web Developer", "Time":"Dec'11","Location":"Kitchener, ON","Tasks": tasks = ['Web Dev. on Official Website','Debugging'], "WorkDistribution": workDis = ['75%','25%'], "Color": colors = ['F5444D','44Da61','00B0EA'], "qTipID": id = ['work_fundraid_1','work_fundraid_2']};
+
 var masterTable = [ feedband, communitech, fundraid, vixs, sayerrecords ];
 
 function swap(data)
