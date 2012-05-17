@@ -454,6 +454,27 @@ function qTipLoad()
 					target: $('#work_fundraid_1')
 				}
 			});
+	
+	$('#work_vixs_1').qtip({
+				content: {
+					text: 'Tested Software Development Kits that included hardware, drivers, middleware and audio/video applications for performance'
+				},
+				position: {
+					my: 'right center',
+					at: 'left center',
+					target: $('#work_vixs_1')
+				}
+			});
+	$('#work_vixs_2').qtip({
+				content: {
+					text: 'Assisted in defining QA processes and worked with development team in the hardware and software debugging process'
+				},
+				position: {
+					my: 'right center',
+					at: 'left center',
+					target: $('#work_vixs_2')
+				}
+			});
 }
 
 $(document).ready(function()
@@ -466,6 +487,7 @@ var feedband, communitech, fundraid, vixs, sayerrecords = new Object();
 feedband = { "Company":"Feedband", "Position":"Co-founder, Lead of Software Dev.", "Time":"Dec'11 - Present","Location":"Waterloo, ON","Tasks": tasks = ['Software Dev.','Cloud Infrastructure','Product R&D + Business Management'], "WorkDistribution": workDis = ['50%','20%','30%'], "Color": colors = ['F5444D','44Da61','00B0EA'], "qTipID": id = ['work_feedband_1','work_feedband_2','work_feedband_3']};
 communitech = { "Company":"Communitech AppsFactory", "Position":"Software Developer", "Time":"Sept'11 - April'12","Location":"Kitchener, ON","Tasks": tasks = ['Web Photo Sharing App','Android Sms and Email App','HTML5 Game for Tablets','Server API for Playbook App'], "WorkDistribution": workDis = ['35%','15%','35%','15%'], "Color": colors = ['F5444D','44Da61','00B0EA','FFB90F'], "qTipID": id = ['work_communitech_1','work_communitech_2','work_communitech_3','work_communitech_4']};
 fundraid = { "Company":"FundRaid Inc.", "Position":"Web Developer", "Time":"Dec'11","Location":"Kitchener, ON","Tasks": tasks = ['Web Dev. on Official Website','Debugging'], "WorkDistribution": workDis = ['75%','25%'], "Color": colors = ['F5444D','44Da61','00B0EA'], "qTipID": id = ['work_fundraid_1','work_fundraid_2']};
+vixs = { "Company":"ViXS Systems", "Position":"QA Engineer", "Time":"Jan'11 - April'11","Location":"Toronto, ON","Tasks": tasks = ['Hardware/Software Testing','Defining QA processes'], "WorkDistribution": workDis = ['80%','20%'], "Color": colors = ['F5444D','44Da61','00B0EA'], "qTipID": id = ['work_vixs_1','work_vixs_2']};
 
 var masterTable = [ feedband, communitech, fundraid, vixs, sayerrecords ];
 
