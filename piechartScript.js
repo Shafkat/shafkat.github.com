@@ -480,6 +480,7 @@ function qTipLoad()
 $(document).ready(function()
 {	
 	qTipLoad();
+	console.log('IE is not supported.');
 });
 
 var feedband, communitech, fundraid, vixs, sayerrecords = new Object();
@@ -510,3 +511,7 @@ function swap(data)
 	qTipLoad();
 }
 
+function specialCase()
+{
+	
+}
