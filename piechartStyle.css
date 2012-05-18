@@ -179,7 +179,7 @@ body {
 	right: 0px;
 	bottom: 10%;
 	
-	width:125px;
+	width:85px;
 	height:60px;
 }
 
@@ -196,7 +196,7 @@ body {
 	right: 0px;
 	top: 10%;
 	
-	width:125px;
+	width:85px;
 	height:60px;
 }
 
@@ -204,18 +204,18 @@ body {
 {	
 	float: right;
 	right: 0px;
-	margin-right: 20%;
-	margin-top: 14%;
+	margin-right: 17%;
+	margin-top: 24%;
 	
-	font-size: 1.35em;
+	font-size: 1em;
 }
 
 #btnTxtNext
 {	
 	float: right;
 	right: 0px;
-	margin-right: 35%;
-	margin-top: 14%;
+	margin-right: 32%;
+	margin-top: 24%;
 	
-	font-size: 1.35em;
+	font-size: 1em;
 }
