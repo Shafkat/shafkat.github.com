@@ -602,7 +602,7 @@ h1{
 	position: fixed;
 	float: right;
 	right: 0px;
-	bottom: 40%;
+	bottom: 35%;
 	
 	width:125px;
 	height:60px;
@@ -619,7 +619,7 @@ h1{
 	position: fixed;
 	float: right;
 	right: 0px;
-	top: 25%;
+	top: 35%;
 	
 	width:125px;
 	height:60px;
@@ -643,5 +643,14 @@ h1{
 	margin-top: 16%;
 	color: black;
 	font-size: 1.15em;
+}
+
+#hoverOrTap
+{
+	width: 125px;
+	margin-left: 55%;
+	margin-top: 5%;
+	margin-bottom: -15%;
+	opacity: 0.65;
 }
 

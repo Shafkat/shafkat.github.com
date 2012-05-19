@@ -162,12 +162,12 @@ $(document).ready(function()
 				}
 			});
 //Positioning
-$('#csschart').css('margin-left', '30%');
+$('#csschart').css('margin-left', '27%');
 $('#csschart').css('margin-top','5%');
 $('#csschart2').css('margin-top','5%');
-$('#csschart2').css('margin-left', '30.5%');
+$('#csschart2').css('margin-left', '27.5%');
 $('#csschart3').css('margin-top','-10%');
-$('#csschart3').css('margin-left', '30%');
+$('#csschart3').css('margin-left', '27%');
 $('#csschart3').css('margin-bottom', '2%');
 
 });
