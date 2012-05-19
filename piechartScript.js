@@ -454,6 +454,16 @@ function qTipLoad()
 					target: $('#work_fundraid_1')
 				}
 			});
+	$('#work_fundraid_2').qtip({
+				content: {
+					text: 'Took out old code that was not rendering properly. Some tinkering with problems communicating with the Facebook API'
+				},
+				position: {
+					my: 'right center',
+					at: 'left center',
+					target: $('#work_fundraid_2')
+				}
+			});
 	
 	$('#work_vixs_1').qtip({
 				content: {
