@@ -500,18 +500,20 @@ function swap(data)
 	$('#work_leftSide').append(data.Company+'<br />'+data.Position+'<br />'+data.Time+'<br />'+data.Location);
 	
 	$('#chartData').empty();
-	$('#chartData').append('<tr><th>Responsibility</th><th>% of Work</th></tr>');
+	$('#chartData').append('<tr id="chartDataHeader"><th>Responsibility</th><th>% of Work</th></tr>');
 	
 	for(i = 0; i<data.Tasks.length; i++)
 	{
-		$('#chartData').append('<tr style="color: #'+data.Color[i]+ '"id='+data.qTipID[i]+'><td>'+data.Tasks[i]+'</td><td>'+data.WorkDistribution[i]+'</td></tr>');
+		if(data.Company == "Communitech AppsFactory")
+		{
+			$('#chartData').append('<tr style="font-size: 0.95em; color: #'+data.Color[i]+ '"id='+data.qTipID[i]+'><td>'+data.Tasks[i]+'</td><td>'+data.WorkDistribution[i]+'</td></tr>');
+		}
+		else
+		{
+			$('#chartData').append('<tr style="color: #'+data.Color[i]+ '"id='+data.qTipID[i]+'><td>'+data.Tasks[i]+'</td><td>'+data.WorkDistribution[i]+'</td></tr>');
+		}
 	}	
 	
 	$( pieChart );
 	qTipLoad();
-}
-
-function specialCase()
-{
-	
 }
