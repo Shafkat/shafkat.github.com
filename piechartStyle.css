@@ -45,7 +45,7 @@ body {
 #chartData th, #chartData td {
   padding: 0.5em;
   padding-top: 0.15em;
-  padding-bottom: 0.15em;
+  padding-bottom: 0.25em;
   border: 0px dotted #666;
   text-align: left;
 }
