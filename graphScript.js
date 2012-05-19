@@ -2,7 +2,7 @@ $(document).ready(function()
 {	
 	$('#javascript').qtip({
 				content: {
-					text: 'I Love Javascript!!'
+					text: 'I abolutely Love Javascript!! Most of my coding experience is in JS. One of the many reasons I love JS is that it is very loosely typed. When I am coding, I want to think more about how I will implement the logic and not how to figure out HOW to make the language do what I want it to do. Yes, I know JS has its down sides, but the bad sides dont take away much from its Awesomeness!'
 				},
 				position: {
 					target: 'mouse'
@@ -10,7 +10,7 @@ $(document).ready(function()
 			});
 	$('#HTML5').qtip({
 				content: {
-					text: 'HTML5'
+					text: 'HTML5, I believe has contributed to redefine what web technology is capable of doing. I just love HTML5 because it is flexible enough to let me bring my ideas to life!'
 				},
 				position: {
 					target: 'mouse'
@@ -18,7 +18,7 @@ $(document).ready(function()
 			});
 	$('#CSS3').qtip({
 				content: {
-					text: 'CSS3'
+					text: 'I feel CSS3 is the juice of web technology right now. The types of graphics rendering that is possible with CSS3 just numbs my mind! xD'
 				},
 				position: {
 					target: 'mouse'
@@ -26,7 +26,7 @@ $(document).ready(function()
 			});
 	$('#Csharp').qtip({
 				content: {
-					text: 'C#'
+					text: 'C# was my first proper exposure to computer programming. I used C# for university programming courses and also for my initial tinkering with code.'
 				},
 				position: {
 					target: 'mouse'
@@ -34,7 +34,7 @@ $(document).ready(function()
 			});
 	$('#Java').qtip({
 				content: {
-					text: 'Java'
+					text: 'I have not had the chance to use Java much. I used it at work while making an Android app. As the syntax is very similar to C#, I know abit about coding Java.'
 				},
 				position: {
 					target: 'mouse'
