@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Shafkat Haque | Research</title>
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/plyr.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<style>
+		body {
+			font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+			min-width: 900px;
+		}
+
+		.results {
+			padding-left: 10%;
+			padding-right: 10%;
+			margin-top: 5%;
+			margin-bottom: 5%;
+		}
+
+		.player {
+			width: 70%;
+			padding-top: 3%;
+			padding-bottom: 3%;
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<h4>Jarvis Demo</h4>
+		<div class="player" id="videos">
+		    <video poster="../assets/images/jarvis_vid_poster.png" controls crossorigin>
+		        <!-- Video files -->
+		        <source src="../assets/videos/jarvis_demo.m4v" type="video/mp4">
+
+		        <!-- Fallback for browsers that don't support the <video> element -->
+		        <div>
+		            <a href="../assets/videos/VID_00000011.mp4">Download</a>
+		        </div>
+		    </video>
+		</div>
+		<!-- <h4>This video got damaged and may appear glitchy and without audio if you are viewing it in Safari.<br/>
+		To view with audio and without glitches please open this page on Chrome.<br />My apologies.</h4> -->
+
+	</center>
+	<script>
+		(function(d,p){
+		    var a=new XMLHttpRequest(),
+		        b=d.body;
+		    a.open("GET",p,!0);
+		    a.send();
+		    a.onload=function(){
+		        var c=d.createElement("div");
+		        c.style.display="none";
+		        c.innerHTML=a.responseText;
+		        b.insertBefore(c,b.childNodes[0])
+		    }
+		})(document,"../assets/images/sprite.svg");
+		$(document).ready(function(){
+            // $( '.banner' ).css( 'min-height', screen.height * 0.45 );
+            // $( '.content' ).css( 'top', screen.height * 1/2 );
+        })
+	</script>
+
+	<!-- Plyr core script -->
+	<script src="http://cdn.plyr.io/1.0.25/plyr.js"></script>
+	<!-- Docs script -->
+	<script src="http://cdn.plyr.io/1.0.25/docs.js"></script>
+</body>
+</html>
