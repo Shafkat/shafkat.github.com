@@ -236,51 +236,41 @@
 	</div>
 
 	<div class="text-content">
-        <p class="lead" style="color: #000;" id="background">Background</p>
+        <p class="lead" style="color: #000;" id="background">Summary</p>
         <div class="progress">
         	<div class="progress-bar" style="width: 100%;"></div>
         </div>
 
-        <p>Last summer of 2014, I was invited by Professor Sebastian Fischmeister from University of Waterloo to work in his Real-time Embedded Systems lab as an undergraduate research assistant. I worked on an autonomous car simulation framework that he was working on. I was given the responsibility of designing and prototyping the hardware stack and setting up the entire system of hardware and software. I worked on determining the hardware stack required for the system and choosing the right high performance RC cars. I also worked on the PID controllers and computer vision software for the system. The most interesting part of this work was figuring out how to power the car with additional electronics onboard and making the car completely wireless.
-	    <br /><br />
-	    The autonomous car simulation framework is being built to be used by researchers from various universities. This system will be used to test many types of autonomous algorithms such as collision detection, lane departure warnings, driver-less navigation, etc. Using this system, researchers will be able to easily test their algorithms and also collect data very safely from the comfort of their labs. This system is being developed to be very portable and economic so that many universities can build their own autonomous car simulation platform.</p>
-
-	    <p class="lead" style="color: #000;" id="setup">Setup</p>
-        <div class="progress">
-        	<div class="progress-bar" style="width: 100%;"></div>
-        </div>
-
-        <p>We used Traxxas high performance RC cars for our setup, and we added a Arduino Mega logic board for generating the PWD signals along with a BeagleBone which ran a stripped down version of QNX. We also had XBee radio module on the car so that it can communicate with other cars or sensors. A Wireless Bluetooth camera was added to the front of the car so that we could have a video feed for the lane departure software that ran on a separate machine. The lane departure program running on matlab would send an alert to the car the moment it started to drift out of the lane.<br /><br />
-
-		As we did not have onboard sensors for the car to figure out its position on the treadmill, we used a camera placed directly above the treadmill running another matlab program which would calculate where the car is relative to the road and send those coordinates to the car over the XBee radio module.<br /><br />
-
-		As this system had to have a way to easily push code to the car for researchers, we decided to add a mini wifi router on the car as well. We found a router that was roughly 2 inches by 2 inches and consumed low power. Using this router enabled us to get the car connected to our local network which then allowed code to be pushed to the car on the fly from the QNX IDE. <br /><br />
-
-		Finally to power everything on the car we used Traxxas 12V LiPO batteries. The car motor and electronics needed a minimum of one battery, but the chassis had room for a second backup battery. So we used the second battery to power the additional electronics onboard the car.</p>
-
-		<p class="lead" style="color: #000;" id="results">Results</p>
-        <div class="progress">
-        	<div class="progress-bar" style="width: 100%;"></div>
-        </div>
-
-        <p>After only 3 months of work we were successful in making the system autonomous and completely independent. As shown in the videos, the car was able to stay in the same location on the simulated road and could also move to different lanes when asked to. The system was also stable and was able to run at a reasonable speed.<br /><br />
-
-		However there were some issues that could be improved upon. The camera system used to track the position of the car on the treadmill was running at 10 Hz. This was a severe limitation as we tried to push the car to go faster. As the car was not able to sample it's position fast enough, going past a certain speed caused large errors in measurement in the PID controls and created a exponential oscillation in the car's movements. The best way to fix this is to replace the camera tracking system with an IR proximity sensor based approach. If the car is equipped with IR sensors on its sides then the car will be able to measure its position more accurate and at greater sampling rates such as 100 Hz. This will allow it go much faster without causing any instability.<br /><br />
-
-		Another problem that needed to be addressed was the power consumption of the car. Using the 2 12V LiPO batteries we could get roughly 15-20 minutes of functional use. This was not enough time to do in depth testing or data collection. Given the time needed to recharge the LiPO batteries were about 2 hours, a better battery alternative should be found. Potential solutions can be using high density LiPO batteries to drive the car which should give more than 20 minutes to the run time. Also using a separate Lithium Ion battery for powering the extra electronics would be a better solution than the LiPO batteries. The drawback of using high density batteries and high capacity Li-ion batteries is that a lot of extra weight will be added to the car which will make the car use more battery to drive.</p>
-	</div>
+        <p>The Advanced Driving Assistance System (ADAS) hardware and software setup in the Real Time Embedded Systems lab under Sebastian Fischmeister's supervision has progressed very rapidly and successfully in the last few years. Right now, in brief, the system works by having a host computer running all the software talk to a remote controller for a small RC car that is placed on a treadmill. The treadmill is also connected to the host computer. There is a camera that is placed directly above the treadmill that is used as part of a closed loop feedback system that guides the car on the treadmill.
+        <br /><br />
+        In this current setup, the areas that needed important development work were<br />
+			- The bridge between the host computer and the remote controller that talks to the
+			RC car<br />
+			- A diagnostics framework that would allow researchers to determine how the system
+			is functioning in cases either a component of the system has been replaced, or to check if the remote control car is working as per specifications
+		<br /><br />
+		The host computer is running ROS which is talking to the remote control hardware over an Arduino Mega as an I2C bridge. This particular bridge setup was prototyped on a breadboard with loose fly wires and jumper wires. This prototype worked as needed, however it was very fragile and prone to damage. This was a weak hardware link in the system.
+		<br /><br />
+		At this point in the development of the system, it is very important for the system to have a good diagnostic framework to be able to routinely check and evaluate the status of the system. More and more researchers and students and contributing to this project and the ROS software for the system is being designed and implemented in a way that focuses on modularity so that many can contribute to the code base and add to the research without breaking any of the existing features. The diagnostic framework is thus important to ensure the continuously updating code base is not disrupting the system. Also if in the future any other researcher wants to replicate this system, then a diagnostic framework will help check and ensure the system is rebuilt properly to specifications.
+		<br /><br />
+		The solutions implemented in this report are of a custom designed hardware which will act as a bridge from the host computer to the remote controller hardware. It has been designed in a generic way to allow for a wider range of compatibility for any future remote control hardware changes.
+		<br /><br />
+		In this report I will talk about the solutions to the above problems and go over the design and implementation of the solutions with a conclusion with the results of the solutions and possible improvements and recommendations.
+		<br /><br />
+		For further details please see my <a href="../assets/files/ECE499_Report.pdf">report</a> of the research.
+        </p>
 
 	<div class="image_container" id="designs" style="padding-bottom: 5%">
 		<center><h3>Hardware Designs</h3><br /></center>
 		<div class="panel panel-default">
 		  <div class="panel-body">
-		    <a href="../assets/images/RC_HW_Bridge_V1_schematic.jpg"><center><img src="../assets/images/RC_HW_Bridge_V1_schematic.jpg"  style="width: 87%"/></center></a>
+		    <a href="../assets/images/RC_HW_Bridge_V1_schematic.jpg"><center><img src="../assets/images/RC_HW_Bridge_V1_schematic.jpg"  style="width: 85%"/></center></a>
 		  </div>
 		  <div class="panel-footer">This is the first schematic of the host machine to remote controller bridge I designed.</div>
 		</div>
 		<div class="panel panel-default">
 		  <div class="panel-body">
-		    <a href="../assets/images/RC_HW_Bridge_V1_combined.jpg"><center><img src="../assets/images/RC_HW_Bridge_V1_combined.jpg" style="width: 60%"/></center></a>
+		    <a href="../assets/images/RC_HW_Bridge_V1_combined.jpg"><center><img src="../assets/images/RC_HW_Bridge_V1_combined.jpg" style="width: 50%"/></center></a>
 		  </div>
 		  <div class="panel-footer">This is PCB Layout for the schematic. I designed the PCB layout to be in the shape of a cape for the Arduino Mega so that it is easier to attached to the Arduino Mega.</div>
 		</div>

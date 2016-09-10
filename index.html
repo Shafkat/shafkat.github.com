@@ -42,37 +42,28 @@
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Well versed in</th>
-                            <th>Familiar with</th>
+                            <th>Software</th>
+                            <th>Hardware</th>
+                            <th style="width:33%;">Miscellaneous</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Languages</td>
-                            <td>Python, Ruby, Javascript, C#/Java, C, HTML, CSS</td>
-                            <td>C++, VHDL, Verilog, PostgreSQL, Matlab</td>
+                            <td>General</td>
+                            <td>Desktop, Mobile, Web, Architectures, Tools, API design, SDKs, Firmware</td>
+                            <td class="border_right">Schematics, PCB Layout, Embedded System Design, Systems Integration</td>
+                            <th rowspan="3">Research and Development, Product Design, UI/UX Design, Rapid Hardware/Software Prototyping, Demos/Presentations, Cross-Functional Collaboration</th>
                         </tr>
                         <tr>
-                            <td>Software Frameworks</td>
-                            <td>ARM Assembly, Real Time OS, QNX BSP, SDKs, APIs, Ruby on Rails, Sinatra, Rack, jQuery, .NET</td>
-                            <td>Firmware, Drivers, Chromium Embedded Framework</td>
+                            <td>Technologies</td>
+                            <td>Facial, Speech Recognition, NLP, RTOS, Web Frameworks</td>
+                            <td class="border_right">Advanced Driver Assistance Systems, Robotics, FPGAs</td>
                         </tr>
                         <tr>
-                            <td>Design</td>
-                            <td>Product Design, Prototyping, Software Architectures, APIs</td>
-                            <td>Tools, SDKs, Software Services</td>
+                            <td>Specifics</td>
+                            <td>C, Python, Swift, Javascript, C++, Obj-C, Matlab, Verilog, Ruby</td>
+                            <td class="border_right">Microcontrollers, Sensors, Soldering, Debugging, Test Fixtures</td>
                         </tr>
-                        <tr>
-                            <td>Hardware</td>
-                            <td>Arduino, BeagleBone, TI Launchpad, Schematics, PCB Layout, HW Assembly</td>
-                            <td>XBee, Sensors, Kinect, Eye Trackers, etc.</td>
-                        </tr>
-                        <tr>
-                            <td>Communication</td>
-                            <td>Technical Presentations, Demos, Training</td>
-                            <td></td>
-                        </tr>
-                        
                     </tbody>
                 </table> 
             </div>
@@ -265,9 +256,23 @@
             text-align: center;
         }
 
+        .table>tbody>tr>th {
+            border-top: 0;
+            vertical-align: middle;
+            padding-left: 3%;
+            color: #444444;
+        }
+
         .table td:nth-child(1) {  
             font-size: 1.1em;
             color: #000;
+        }
+
+        .table>tbody>tr>td {
+            border-top: 0;
+        }
+        .border_right {
+            border-right: 1px solid #dddddd;
         }
 
         .skils_table {
