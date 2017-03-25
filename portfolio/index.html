@@ -1,0 +1,95 @@
+<html>
+<title>Shafkat's Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./css/bootstrap.css">
+	<body>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="http://shaque.me">Shafkat Haque</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="./index.html">Projects <span class="sr-only">(current)</span></a></li>
+						<li><a href="./deluminator.html">Deluminator <span class="sr-only">(current)</span></a></li>
+						<li><a href="./touchpad.html">Touch Pad</a></li>
+						<li><a href="./message.html">Message for the Future</a></li>
+						<li><a href="https://www.vitsoe.com/us/about/good-design">The Ten Principles</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="jumbotron main">
+			<h1>Design Portfolio</h1>
+			<p>Here are some of my latest design projects.</p>
+		</div>
+		<div class="progress">
+			<div class="progress-bar" style="width: 100%;"></div>
+		</div>
+		<a href="./deluminator.html">
+			<div class="jumbotron project_container deluminator">
+				<h1>The Deluminator</h1>
+				<p>Save Lives. Faster.</p>
+			</div>
+		</a>
+		<a href="./touchpad.html">
+			<div class="jumbotron project_container touchbar">
+				<h1>Retina TouchPad</h1>
+				<p>The Next Generation Apple Track Pad</p>
+			</div>
+		</a>
+		<a href="./message.html">
+			<div class="jumbotron project_container message">
+				<h1>Message for the Future</h1>
+				<p>Message in a bottle, for the year 12017 A.D.</p>
+			</div>
+		</a>
+	</body>
+	<style>
+		.project_container:hover {
+			cursor: pointer;
+		}
+
+		.main p {
+			color: #444444;
+		}
+
+		.deluminator {
+			background-image: url("../assets/images/portfolio_main_deluminator.png");
+			background-size: 100%;
+		}
+
+		.deluminator h1 {
+			color: orange;
+		}
+
+		.deluminator p {
+			color: orange;
+		}
+
+		.touchbar {
+			background-image: url("../assets/images/portfolio_main_touchbar.png");
+		}
+
+		.touchbar h1, p {
+			color: white;
+		}
+
+		.message {
+			background-image: url("../assets/images/portfolio_main_future.png");
+		}
+
+		.message h1, p {
+			color: white;
+		}
+	</style>
+</html>
