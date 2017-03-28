@@ -1,7 +1,7 @@
 <html>
 <title>Shafkat's Portfolio</title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <link rel="stylesheet" href="./css/bootstrap.css">
 	<body>
 		<nav class="navbar navbar-inverse">
@@ -92,6 +92,57 @@
 			</center>
 			<p>After looking at the differences in these fonts, I decided to go with Roboto Light for base font and Roboto Regular for highlighted text. The reason for this was I wanted the UI to look and feel modern. A font like Courier is very standard in military applications and have a strong character (no pun intended). However Roboto had the sleek look that resembles Helvetica and gives the UI a fresh feel as compared to Courier.</p>
 			<p>From my tests, I did not find any significant differences in legibility between the fonts and I found that any such difference can be compensated for by increasing the contrast of the colors used in the UI.</p>
+			<hr />
+			<p><strong>An exploration into making the Details View for the device more interesting</strong></p>
+			<center>
+				<p><img src="../assets/images/deluminator_ui_details_mockup.png" width="75%"></p>
+			</center>
+			<p>
+				The idea behind this layout was to keep some graphical elements in the UI and not just make it only text. Also another goal was to help give the user a view with perspective so that it is easier to know which direction to move towards.
+			</p>
+			<p>
+				However this design had two big problems. The first problem was that the perspective view of the map was fixed. The hardware did not have any accelerometers or a compass that would let the UI know which way the user is facing. This made the perspective slightly redundant and was possible that it would mislead the user instead.
+			</p>
+			<p>
+				The second problem was that the hardware running all the software and the UI was not powerful enough to render all that graphics together. The perspective map required 3D manipulation of graphical elements and that made the UI very laggy and slow. This is why we did not go ahead with this UI design and instead opeted for a much simpler design that only showed the information table from the UI design above.
+			</p>
+			<hr />
+			<p><strong>Storyboard on how the Deluminator will be used in the field:</strong></p>
+			<p>
+				<strong>Exposition: </strong>
+				An apartment building is on fire. Several people seem to be trapped. Building is engulfed with smoke. Some of the occupants of the building are wearing the Flare watch that is transmitting a signal that includes their pulse and oxygen levels.
+			</p>
+			<center>
+				<p>
+					<img src="../assets/images/portfolio_deluminator_storyboard_1.png" width="75%" />
+				</p>
+			</center>
+			<p>
+				<strong>Rising Action: </strong>
+				Fire fighters equiped with the deluminator arrive at the scene. Hoping some residents of the building are wearing the Flare watch that transmits their signal, the fire fighters take out their Deluminator devices and start scanning for signals.
+			</p>
+			<center>
+				<p>
+					<img src="../assets/images/portfolio_deluminator_storyboard_2.png" width="75%" />
+				</p>
+			</center>
+			<p>
+				<strong>Climax: </strong>
+				Fire fighters pan out to form a triangle around the building on fire. Using triangulation the deluminator devices can pin point the location of the transmitted signals inside the building. This allows the fire fighters to know exactly where the people trapped are so that they can go save them.
+			</p>
+			<p>
+				The fire fighters find 2 signals coming from within the building. They know the pulse and oxygen levels of the person. They realize that one of the two people are in a critical state. Heart rate is falling. Oxygen levels are at 50% and quickly dropping. They must take action, fast!
+			</p>
+			<center>
+				<p>
+					<img src="../assets/images/portfolio_deluminator_storyboard_3.png" width="75%" />
+				</p>
+			</center>
+			<p>
+				<strong>Falling Action: </strong>
+				By prioritizing their search and rescue efforts, the fire fighters were able to save both the person in critical condition, who turned out to be an infant child and also the 2nd person who turned out to be an elderly female. Both were saved in time to prevent any long term harm to their health.
+			</p>
+			
 		</div>
 	</body>
 	<style>
