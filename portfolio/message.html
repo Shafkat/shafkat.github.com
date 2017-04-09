@@ -56,24 +56,26 @@
 			<hr />
 			<p><strong>Requirements for The Message:</strong></p>
 			<p>According to the Human Interference Task Force</p>
-			<ol>
-				<li>that it is a message at all</li>
-				<li>that dangerous material is stored in a given location</li>
-				<li>information about the type of dangerous substances</li>
-				
-				<li>The message needs to have instructions</li>
-					<ul>
-						<li>To stay away</li>
-						<li>What to do if contaminated</li>
-					</ul>
-				<li>Needs to catch attention</li>
-				<li>Needs to survive outdoors for thousands of years</li>
-					<ul>
-						<li>Immune to corrosion</li>
-						<li>Immune to decay and damage</li>
-					</ul>
-				<li>Information about the dangerous substances</li>
-			</ol>
+			<ul>
+				<ol>
+					<li>that it is a message at all</li>
+					<li>that dangerous material is stored in a given location</li>
+					<li>information about the type of dangerous substances</li>
+					
+					<li>The message needs to have instructions</li>
+						<ul>
+							<li>To stay away</li>
+							<li>What to do if contaminated</li>
+						</ul>
+					<li>Needs to catch attention</li>
+					<li>Needs to survive outdoors for thousands of years</li>
+						<ul>
+							<li>Immune to corrosion</li>
+							<li>Immune to decay and damage</li>
+						</ul>
+					<li>Information about the dangerous substances</li>
+				</ol>
+			</ul>
 			<hr />
 			<p><strong>Research into possible UI elements that can be used: </strong></p>
 			<p><strong>Symbols that can be used:</strong></p>
@@ -183,12 +185,75 @@
 	 				</ul>
  				</ul>
  			</p>
+ 			<hr />
  			<p><strong>Final Design of the Message</strong></p>
  			<center>
 	 			<p>
 	 				<img src="../assets/images/portfolio_final_message_poster.png" width="75%" />
 	 			</p>
  			</center>
+ 				<strong>Going over the design details:</strong>
+ 				<p>
+ 					<ul>
+	 					<strong>Adopting a portrait orientation:</strong>
+	 					<ul>
+		 					<li>
+		 						After carefully considering the way in which it makes most sense to read a posted notice, I realized the most effective way to read the message would be top to bottom. This is because all languages are written top to bottom and it is a reasonable assumption to make that in the future this practice will persist. A very good way to indicate to the user to read the message top to bottom is most likely a portrait orientation as compared to a horizontal or landscape orientation. This is a bit of a departure from my initial wireframes.
+		 						Also it is worth noting that many notice boards used by government organizations warning the public often take a similar form and orientation.
+		 					</li>
+		 				</ul>
+		 				<strong>Symbols and Imagery:</strong>
+	 					<ul>
+		 					<li>
+		 						After struggling to come up with proper imagery that properly conveys the right message of the danger, I resorted to re-using some of the symbols already used in current warning messages that are designed for future generations. I am refering to the sign created by the <a href="https://en.wikipedia.org/wiki/Long-time_nuclear_waste_warning_messages">Human Interference Task Force</a>.
+		 					</li>
+		 					<li>
+		 						I made some modifications where instead of using only the symbol for radiation, I also added the symbol for an atom. In case the symbol for radiation changes or becomes vague, the symbol for the atom should be a re-inforcing meaning to indicate <i>Nuclear Radiation</i>.
+		 						I also used the symbol for death and the symbol for running to indicate that anyone who see's this message should run away or face death.
+		 					</li>
+		 				</ul>
+		 				<strong>Scientific Information:</strong>
+		 				<ul>
+		 					<li>
+		 						The more novel portion of this poster is the bottom half. This is where I added more scientific information regarding what is actually dangerous about this message.
+		 					</li>
+		 					<li>
+		 						The two circles right below the skull and running symbol are borrowed from the <a href="https://en.wikipedia.org/wiki/Pioneer_plaque">message plaques</a> of the Voyager missions as referred to previously in this page. The two circles actually represent the two lowest states of a hydrogen atom. The vertical lines with the dots indicate the spin movements of the proton and electron. The spin-flip transition of a hydrogen atom’s electron has a frequency of about 1420.405 MHz, which corresponds to a period of 0.704 ns. Light at this frequency has a vacuum wavelength of 21.106 cm (which is also the distance the light travels in that time period). Below the symbol, the small vertical line—representing the binary digit 1—specifies a unit of length (21 cm) as well as a unit of time (0.7 ns). Both units are used as measurements in the other symbols <a href="http://www.planetary.org/blogs/guest-blogs/2016/0120-the-pioneer-plaque-science-as-a-universal-language.html">[reference]</a>.
+		 					</li>
+		 					<li>
+		 						Hopefully the hydrogen spin-flip diagram can imply the binary nature of the atom. This gives me the basis to encode important data in binary. This is exactly what happens right below the hydrogen spin-flip diagram. I picked an example of Uranium 233 radiation for this poster. To understand that the radiation is from Uranium 233 which has a half life of 160,000 years, the bare minimum information needed is the atomic number of Uranium which is 92 and the half life value which is 160,000. These two numbers are encoded in binary using the convention from the hydrogen spin-flip diagram. A vertical line represents a 1 and a horizontal line represents a 0. This was a simple way of showing binary value without using the two different numbers, 0 and 1.
+		 					</li>
+		 					<li>
+		 						I also used the atomic symbol here to again tie the reference to the first atomic symbol indicating the following information is tied to the symbol on top of the poster. Next, I had to take a shortcut. I used the symbol for Uranium which is a "U" and next to it as the number 233 which refers to the particular type of Uranium isotope used at the location. The atomic number of Uranium is 92 which in binary is 01011100.
+		 					</li>
+		 					<li>
+		 						To indicate the half-life I used a commonly used notation to represent half-life. Which is a lower case 't' with the fraction "1/2" beside it. This was the only way I could think of easily conveying that the following information is Uranium's half life. The half-life of Uranium is 160,000 years which in binary is 100111000100000000.
+		 					</li>
+		 				</ul>
+		 				<strong>"Danger" in 10 different languages</strong>
+		 				<ul>
+		 					<li>
+		 						The final bottom portion of the message contains the word "danger" in many different languages. In fact these are the most popular 10 languages on earth right now. This is a final redundancy to the message where if someone understood NOTHING of anything else in the poster, they might be able make out the danger this message is trying to convey from recognizing atleast 1 of the 10 languages here. The reasoning behind using these 10 lagnuages is that we know that human language always evolves. English and many other popular languages share very direct and strong roots in the past. We know that traces of Latin exists in English today that have carried over for thousands of years. So there is a high probablity that atleast one of these 10 languages may have descendents that might preserve a variant of the word "danger" and someone reading this message thousands of years in the future might read it and recognize what it means.
+		 					</li>
+		 				</ul>
+		 				<strong>Color</strong>
+		 				<ul>
+		 					<li>I decided to use the same color as the sign developed by the Human Interference Task Force. The outlizes of text and images are black and the background of the entire message is red. This red is a 100% red without presence of any other colors.</li>
+		 					<li>
+		 						The color red helps catch attention which is why fire trucks are colored red. This sign needs to catch attention people fast.
+		 					</li>
+		 					<li>
+		 						Red also has been used historically to represent hatred, anger, danger, warning or death. It is also the color of blood. Of all the colors in the spectrum, red seems to be the best candidate for this message.
+		 					</li>
+		 				</ul>
+		 				<strong>Material</strong>
+		 				<ul>
+		 					<li>
+		 						Most likely this warning message will be printed on strong high durability plastic. Most other types of materials will probably corrode away or get damaged through natural forces, but as plastic is an in-organic material and is non-biodegradable, it has the highest chance of surviving for thousands of years.
+		 					</li>
+		 				</ul>
+	 				</ul>
+ 				</p>
 		</div>
 	</body>
 	<style>
