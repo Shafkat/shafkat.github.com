@@ -147,7 +147,89 @@
 				<strong>Falling Action: </strong>
 				By prioritizing their search and rescue efforts, the fire fighters were able to save both the person in critical condition, who turned out to be an infant child and also the 2nd person who turned out to be an elderly female. Both were saved in time to prevent any long term harm to their health.
 			</p>
-			
+			<hr />
+			<p><strong>User Feedback from a Waterloo Fire-Fighter:</strong></p>
+			<p>
+				We were lucky to be able to demo our project to a Waterloo Fire Department Fire Fighter and he was extremely happy to see what we had built. Here are some of his comments:
+				<ul>
+					<ul>
+						<li>
+							Currently the only "tech" they use are proximity beacons on each fire fighter's jackets. A rudimentary receiver beeps loudly as the beacon is close and goes quiet as the beacon moves further away. This is used to track the fire fighters at a rescue site.
+						</li>
+						<li>
+							For communication, the fire fighters still use radio walkie-talkies from the 80s and 90s.
+						</li>
+						<li>
+							A device like the deluminator could rapidly improve the performance of fire fighters in rescue operations.
+						</li>
+						<li>
+							This device can potentially save lives of those who need to be rescued, time for fire fighters and money for the Fire Department.
+						</li>
+						<li>
+							The UI was good and could prove effective in a real world scenario but it should be tested by fire fighters in a training scenario.
+						</li>
+					</ul>
+				</ul>
+			</p>
+			<p>
+				We were happy to get his feedback and we realized that any new technology that fire fighters can get will help them alot, given their access to technology is very limited. The comment about the UI and the need to do real world testing was very important. If there was more time, one critical step would have been to do real world testing and get user feedback from the fire fighters them selves.
+			</p>
+			<hr />
+			<p><strong>UI Design and Performance:</strong></p>
+			<p>
+				The original user interface designs involved a certain number of graphic elements namely maps. These maps were important in quickly visualizing where the localized signals were relative to the receivers. One of the screens had a design that involved a 3D perspective map to make it even easier for the user of the receiver to know which direction they need to go to find the transmitting signal. However when this design was implemented, it was quickly discovered that the raspberry pi hardware had difficulty rendering all those graphics elements while running a lot of heavy processing due to the multi-threaded program in the background. After some basic testing, the data clearly showed, the difference in performance without 3D perspective map is stark. This is why the map was removed from the design and replaced by a simpler data table. Here are the designs with and without the 3D perspective map.
+			</p>
+			<p><strong>Original UI Design with 3D Perspective Map:</strong></p>
+			<center>
+				<p>
+					<img src="../assets/images/portfolio_deluminator_details_alternative.png" width="75%" />
+				</p>
+			</center>
+			<p><strong>Final UI Design without 3D Perspective Map:</strong></p>
+			<center>
+				<p>
+					<img src="../assets/images/portfolio_deluminator_details_final.png" width="75%" />
+				</p>
+			</center>
+			<p>
+				Also another smaller modification that was made was regarding how the UI elements were generated on boot up. In HTML, the original design was to hide and show certain parts of the UI based on the input from users. The reason for this was to reduce the number of steps required to change the UI. But it turned out from initial tests that hiding and showing elements on the UI actually required more processing power than initially thought. The work around for this turned out to be using some basic animation. Instead of hiding certain parts of the UI in the same screen space, the actual UI layout was made wider. The width was made 2x to be specific. There were two distinct screens to show the user, so the first half of the wide screen layout was dedicated to the first screen and the second half of the wide screen layout was dedicated to the second screen. Whenever the user requested to see the second screen, the software just animate the layout by moving it from right to left and vice versa when the user wanted to return to the first screen. The following diagram clearly demonstrate the wide screen layout, where the blue background represents the total defined screen area:
+			</p>
+			<center>
+				<p>
+					<img src="../assets/images/portfolio_deluminator_screen_layout.png" width="75%" />
+				</p>
+			</center>
+			<hr />
+			<p><strong>Working Hardware and UI Prototype:</strong></p>
+			<center>
+				<p>
+					<img src="../assets/images/portfolio_deluminator_proto_demo.GIF" width="25%" />
+				</p>
+			</center>
+			<p>
+				Just a quick glimpse at how the UI looked like on the real hardware display.
+			</p>
+			<hr />
+			<p><strong>Conclusions on the Project:</strong></p>
+			<p>
+				This project came to an end some short while ago on the day of my team's Engineering Symposium Demo Day. It was very much a last minute scramble to get all the pieces working. software and the UI had to work well enough so that the audience could interact with the prototype and see the UI in action. I am happy to say it all worked out well. The UI and software worked exactly as intended and the audience was very pleased. We got alot of attention and praise from the demo as we had working prototypes and close-to-final software and hardware. The UI definitely gave our demo the final polish that put in the spotlight. Our team ended up winning the <strong>Best Humanitarian Design Award</strong>.
+			</p>
+			<center>
+				<p>
+					<img src="../assets/images/portfolio_deluminator_team_award.JPG" width="75%" />
+				</p>
+			</center>
+			<hr />
+			<p><strong>Possible Improvements on the Project:</strong></p>
+			<p>
+				Looking back, one of the key things I would have done differently is the hardware selection for running the software and UI. At the core of the hardware was a raspberry pi running a processor core at 1 GHz. Once the final software was up and running before the demo, I found that UI was suffering in performance and was lagging. The hardware performance bottle-necked the UI design significantly and I had to compromise the design in exchange for better performance. The final resultant UI was good and I am happy with it, however it could have been much better if the hardware performance was better.
+			</p>
+			<p>
+				In terms of research, it would have been better if I had gathered more feedback data from rescue operations personnel. Even though the UI works well, the design decisions could have been better backed with real user data.
+			</p>
+			<p>
+				Finally, I wish the project was ready for demo some time earlier. This would have given us the opportunity to take it to the Waterloo Fire Department and have then try and test it. Their feedback could have made the UI design even better.
+			</p>
 		</div>
 	</body>
 	<style>
